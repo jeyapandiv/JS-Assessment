@@ -65,7 +65,7 @@ inputform.addEventListener('submit', (event) => {
             delIcon.style.color='red'
             setTimeout(()=> {
                 delIcon.style.color='white'
-            },700);
+            },1000);
         });
 
     
