@@ -16,11 +16,15 @@
         <form id="inputDiv" name="inputForm">
             <div id="productNameInptDiv" name="productNameInpt" class="inputField">
                 <h3 id="productName">Product Name</h3>
-                <input type="text" name="nameInpt" id="productNameInput" class="productInput" placeholder="product" required>
+                
+                <input type="text" name="nameInpt" id="productNameInput" class="productInput" placeholder="product">
+                <p id="nameAlert" class="alert"></p>
             </div>
             <div id="productPriceInptDiv" name="productPriceInpt" class="inputField">
                 <h3 id="productPrice">Amount</h3>
-                <input type="number" name="priceInpt" id="productPriceInput" class="productInput" placeholder="amount" required>
+                
+                <input type="number" name="priceInpt" id="productPriceInput" class="productInput" placeholder="amount">
+                <p id="amountAlert" class="alert"></p>
             </div>
             <div id="submtBtn">
                 <button name="addCartBtn" id="addBtn">Add to Cart</button>
@@ -39,7 +43,7 @@
                 </div>
                 <div id="totalDiv">
                     <h4 id="total">Total Amount</h4>
-                    <h4 id="totalPrice">100</h4>
+                    <h4 id="totalPrice"></h4>
                 </div>
             </div>
         </div>

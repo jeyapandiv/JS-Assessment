@@ -37,7 +37,7 @@ body {
 #inputDiv {
     width: 42%; border-right: 1px solid var(--black);
     display: flex; flex-direction: column;
-    align-items: center; gap: 40px;
+    align-items: center; gap: 30px;
 }
 .inputField {
     width: 65%;
@@ -47,6 +47,10 @@ body {
 }
 #inputDiv h3 {
     padding-bottom: 10px;
+}
+.alert {
+    height: 16px; color: var(--red);
+    font-size: 10px; padding-top: 3px;
 }
 .productInput {
     width: 100%; padding: 5px 0px;
@@ -103,24 +107,34 @@ body {
 }
 #productList {
     width: 80%; max-height: 250px;
-    overflow-y: scroll;
 }
 
 #totalDiv {
     width: 100%; padding-top: 20px;
-    display: flex; 
     justify-content: space-between; align-items: center;
     border-top: 1px solid var(--black);
 }
 
+/* --style for the elements created in js */
 
 .productDetailElDiv i {
+    width: 10%; padding-left: 10px;
+    color: var(--white);
+}
+.productDetailElDiv i:hover{
     color: var(--red);
 }
-.showDel:hover {
-    display: block;
+.productDetailEl {
+    width: 90%;
+    display: flex; justify-content: space-between;
+}
+.productDetailElDiv {
+    width: 100%; height: 60px;
+    display: flex; align-items: center;
 }
 
+
+/* --class lists to add dinamically */
 .overflow {
     overflow-y: scroll;
 }
