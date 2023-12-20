@@ -42,7 +42,6 @@ inputform.addEventListener('submit', (event) => {
     }
 //input submission after validation
     else {
-
     //creating the required elements
         var productDetailElDiv = document.createElement('div');
         productDetailElDiv.setAttribute('class', 'productDetailElDiv');
@@ -90,12 +89,12 @@ inputform.addEventListener('submit', (event) => {
         if (cartList.childElementCount > 4) {
             cartList.classList.add('overflow');
         };
-        inputform.reset()
 
     //taking the values in new array for sorting
         arr[count]=productDetailElDiv;
         count++
-    }
+    };
+    inputform.reset();
 });
 
 //sorting process
