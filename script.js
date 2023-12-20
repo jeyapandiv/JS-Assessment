@@ -77,7 +77,7 @@ inputform.addEventListener('submit', (event) => {
             delIcon.parentElement.remove();
             // console.log(cartList.innerHTML.length);
             if (cartList.innerHTML.length == 17) {
-                totalDiv.style.display = 'none'
+                window.open('index.html','_parent');
             }
         })
 
