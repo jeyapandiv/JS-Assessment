@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Cart</title>
+</head>
+<body>
+<div id="containerMain">
+    <h1 id="mainTitle">Shopping Cart</h1>
+
+    <div id="containerCart">
+        <form id="inputDiv" name="inputForm">
+            <div id="productNameInptDiv" name="productNameInpt" class="inputField">
+                <h3 id="productName">Product Name</h3>
+                <input type="text" name="nameInpt" id="productNameInput" class="productInput" placeholder="product" required>
+            </div>
+            <div id="productPriceInptDiv" name="productPriceInpt" class="inputField">
+                <h3 id="productPrice">Amount</h3>
+                <input type="number" name="priceInpt" id="productPriceInput" class="productInput" placeholder="amount" required>
+            </div>
+            <div id="submtBtn">
+                <button name="addCartBtn" id="addBtn">Add to Cart</button>
+            </div>
+        </form>
+        <div id="cartDiv">
+            <div id="cartHeadBlock">
+                <h3 id="cartProductName">Product Name</h3>
+                <div id="amountAndIcon">
+                    <h3 id="cartProductPrice">Amount</h3>
+                    <i id="desIcon" class="fa-solid fa-caret-up" style="color: #451ad3; font-size: 40px;"></i>
+                </div>
+            </div>
+            <div id="productListDiv">
+                <div id="productList">
+                </div>
+                <div id="totalDiv">
+                    <h4 id="total">Total Amount</h4>
+                    <h4 id="totalPrice">100</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
