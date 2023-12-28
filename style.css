@@ -107,7 +107,6 @@ body {
 }
 #productList {
     width: 80%; max-height: 250px;
-    height: 100%; overflow-y: auto;
 }
 
 #totalDiv {
@@ -136,7 +135,9 @@ body {
 
 
 /* --class lists to add dinamically */
-
+.overflow {
+    overflow-y: scroll;
+}
 .disNone {
     display: none;
 }
