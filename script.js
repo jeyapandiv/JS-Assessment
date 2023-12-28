@@ -83,12 +83,7 @@ inputform.addEventListener('submit', (event) => {
     //total value calculation
         totalVal = Number(totalVal) + Number(productPriceInput);
         totalPrice.innerText = totalVal;
-        totalDiv.style.display = 'flex'
-
-    //list overflow scroll bar
-        if (cartList.childElementCount > 4) {
-            cartList.classList.add('overflow');
-        };
+        totalDiv.style.display = 'flex';
 
     //taking the values in new array for sorting
         arr[count]=productDetailElDiv;
