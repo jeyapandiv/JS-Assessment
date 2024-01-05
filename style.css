@@ -66,6 +66,7 @@ body {
 #addBtn {
     width: 100%; padding: 7px 0px;
     border: none; border-radius: 3px;
+    outline: none;
     font-weight: 700;
     color: var(--white);
     background:  linear-gradient(90deg, var(--blue), var(--dark_lavendar),var(--lavender));
