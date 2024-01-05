@@ -1,7 +1,6 @@
 "use strict"
 
 let inputform = document.forms.inputForm;
-
 let cartList = document.getElementById('productList');
 let totalPrice = document.getElementById('totalPrice');
 let totalDiv = document.getElementById('totalDiv');
@@ -18,14 +17,12 @@ let count = 0;
 let arr = [];
 let newarr = [];
 
-
 //value submission
 inputform.addEventListener('submit', (event) => {
 
     event.preventDefault();
     let productNameInput = inputform.nameInpt.value;
     let productPriceInput = inputform.priceInpt.value;
-
 
 //empty input validation
     if (productNameInput == '') {
@@ -60,14 +57,12 @@ inputform.addEventListener('submit', (event) => {
         productDetailElDiv.append(productDetailEl, delIcon);
         cartList.appendChild(productDetailElDiv);
 
-
         productDetailElDiv.addEventListener('mouseover',()=> {
             delIcon.style.color='red'
-            setTimeout(()=> {
-                delIcon.style.color='white'
-            },1000);
         });
-
+        productDetailElDiv.addEventListener('mouseout',()=> {
+            delIcon.style.color='white'
+        });
     
     //delete icon function
         delIcon.addEventListener('click', () => {
@@ -83,12 +78,7 @@ inputform.addEventListener('submit', (event) => {
     //total value calculation
         totalVal = Number(totalVal) + Number(productPriceInput);
         totalPrice.innerText = totalVal;
-        totalDiv.style.display = 'flex'
-
-    //list overflow scroll bar
-        if (cartList.childElementCount > 4) {
-            cartList.classList.add('overflow');
-        };
+        totalDiv.style.display = 'flex';
 
     //taking the values in new array for sorting
         arr[count]=productDetailElDiv;
@@ -98,7 +88,6 @@ inputform.addEventListener('submit', (event) => {
 });
 
 //sorting process
-
 let arrcount =0;
 shortIcon.addEventListener('click', () => {
     var obj = {}
@@ -107,8 +96,10 @@ shortIcon.addEventListener('click', () => {
         if (obj[a] == undefined) {
             obj[a] = arr[element];
         }
+        else {
+            obj[Number(a)+1] = arr[element];
+        }
     }
-    cartList.innerHTML='';
     for (let i in obj) {  
         newarr[arrcount] = obj[i];
         arrcount++
